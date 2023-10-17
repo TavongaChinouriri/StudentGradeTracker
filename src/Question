@@ -1,0 +1,41 @@
+Case Study: Student Grade Tracker
+
+You have been tasked with creating a program to track and calculate grades
+for a class of students. The system should be able to perform the following
+operations:
+1. Add a student:
+ Each student has a unique ID, name, and a list of their scores on
+different assignments.
+ The system should allow the user to enter the details of a student
+and add them to the class.
+2. Display student information:
+ The system should display the information for a specific student,
+including their ID, name, and scores on assignments.
+3. Calculate the average grade:
+ The system should calculate the average grade for a specific
+student based on their scores on assignments.
+ The average grade should be displayed with a corresponding
+letter grade (e.g., A, B, C) based on a grading scale.
+
+You should create appropriate classes and methods to implement the student
+grade tracker. Here's a suggested class structure:
+1. Student class:
+ Properties: ID, name, list of scores
+ Methods: getters and setters for the properties,
+calculateAverageGrade() to calculate the average grade
+2. GradeTracker class:
+ Properties: an ArrayList or another suitable data structure to store
+the students
+ Methods:
+ addStudent(Student student): adds a student to the tracker
+ displayStudentInformation(int studentId): displays the
+information for a specific student
+ calculateAverageGrade(int studentId): calculates the average
+grade for a specific student
+
+You can implement the Student Grade Tracker by creating the necessary
+classes and implementing the methods mentioned above. Additionally, you
+can add features such as calculating the class average, finding the student
+with the highest grade, or searching for students by name.
+Remember to handle input validation and provide appropriate error messages
+when necessary.
