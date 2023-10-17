@@ -3,9 +3,9 @@ import java.util.List;
 public class Student {
     private int ID;
     private String name;
-    private List<Integer> Scores;
+    private List<Double> Scores;
 
-    public Student(int ID, String name, List<Integer> scores) {
+    public Student(int ID, String name, List<Double> scores) {
         this.ID = ID;
         this.name = name;
         Scores = scores;
@@ -27,11 +27,11 @@ public class Student {
         this.name = name;
     }
 
-    public List<Integer> getScores() {
+    public List<Double> getScores() {
         return Scores;
     }
 
-    public void setScores(List<Integer> scores) {
+    public void setScores(List<Double> scores) {
         Scores = scores;
     }
 
@@ -43,9 +43,9 @@ public class Student {
                 ", Scores=" + Scores +
                 '}';
     }
-    public void calculateAverageGrade(){
+    public double calculateAverageGrade(){
         int sum = 0;
-        for (int scores : Scores) {
+        for (double scores : Scores) {
             sum += scores;
         }
         int divider = Scores.size();
@@ -67,6 +67,7 @@ public class Student {
             System.out.println("ERR: Invalid Average");
         }
 
+        return average;
     }
 }
 

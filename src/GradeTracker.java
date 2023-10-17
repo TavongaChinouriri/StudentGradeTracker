@@ -1,10 +1,9 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class GradeTracker {
-    private ArrayList<Student> studentList;
+    private ArrayList<Student> studentList = new ArrayList<>();
 
-    public GradeTracker(ArrayList<Student> studentList) {
+    public GradeTracker() {
         this.studentList = studentList;
     }
 
@@ -26,7 +25,7 @@ public class GradeTracker {
     }
     public void displayStudent(int ID){
         for (Student student : studentList) {
-            if (student.getID() == studentList) {
+            if (student.getID() == ID) {
                 System.out.println("Student ID: " + student.getID());
                 System.out.println("Name: " + student.getName());
                 System.out.println("Scores: " + student.getScores());
@@ -35,5 +34,16 @@ public class GradeTracker {
         }
         System.out.println("Student not found with ID: " + ID);
     }
+    public void calculateAverageGrade(int studentId) {
+        for (Student student : studentList) {
+            if (student.getID() == studentId) {
+                double averageGrade = student.calculateAverageGrade();
+                System.out.println("Student ID: " + student.getID());
+                System.out.println("Name: " + student.getName());
+                System.out.println("Average Grade: " + averageGrade);
+                return;
+            }
+        }
+        System.out.println("Student not found with ID: " + studentId);
     }
 }
