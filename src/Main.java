@@ -7,14 +7,14 @@ public class Main {
         GradeTracker gradeTracker = new GradeTracker();
         int option;
         do {
-            System.out.println(":::::::::::::::::::::::WELCOME TO THE STUDENT GRADE TRACKER:::::::::::::::::::::::\n"+
-                    "\n                   ::::::::::::CHOOSE YOUR OPTION::::::::::::\n"+
+            System.out.println("\n:::::::::::::::::::::::| WELCOME TO THE STUDENT GRADE TRACKER |:::::::::::::::::::::::\n"+
+                    "\n                   ::::::::::::| CHOOSE YOUR OPTION |::::::::::::\n"+
                     "1. Add Student. " +
                     "\n2. Display Student Information. " +
                     "\n3. Calculate Average. " +
                     "\n4. Exit. ");
             Scanner input = new Scanner(System.in);
-            System.out.print("Enter your option: ");
+            System.out.print("| Enter your option: ");
             option = input.nextInt();
             List<Double> scores = new ArrayList<>();
             switch (option) {
@@ -25,9 +25,9 @@ public class Main {
                     System.out.print("Enter number of Scores: ");
                     int studentScoresNum = input.nextInt();
                     System.out.print("Enter Student Name: ");
-                    String name = input.next();
+                    String name = input.nextLine();
                     for (int i = 1; i <= studentScoresNum; i++) {
-                        System.out.print("Enter Student Scores: ");
+                        System.out.print("\nEnter Student Scores: ");
                         double score = input.nextDouble();
                         assert false;
                         scores.add(score);

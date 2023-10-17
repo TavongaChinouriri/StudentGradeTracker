@@ -51,22 +51,6 @@ public class Student {
         int divider = Scores.size();
         double average = sum/divider;
         System.out.println("Your average for the scores for student "+ID+" is "+average);
-        if(average<=45){
-            System.out.println("Grade D");
-            }
-        else if (average>45 && average<=59) {
-            System.out.println("Grade C");
-            }
-        else if (average>59 && average<=78) {
-            System.out.println("Grade B");
-        }
-        else if (average>78 && average<=100) {
-            System.out.println("Grade A");
-        }
-        else {
-            System.out.println("ERR: Invalid Average");
-        }
-
         return average;
     }
 }

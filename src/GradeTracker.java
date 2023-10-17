@@ -40,7 +40,23 @@ public class GradeTracker {
                 double averageGrade = student.calculateAverageGrade();
                 System.out.println("Student ID: " + student.getID());
                 System.out.println("Name: " + student.getName());
-                System.out.println("Average Grade: " + averageGrade);
+                String grade = "";
+                if(averageGrade<=45){
+                    grade = "D";
+                }
+                else if (averageGrade>45 && averageGrade<=59) {
+                    grade = "C";
+                }
+                else if (averageGrade>59 && averageGrade<=78) {
+                    grade = "B";
+                }
+                else if (averageGrade>78 && averageGrade<=100) {
+                    grade = "A";
+                }
+                else {
+                    grade = "ERR: Invalid Average";
+                }
+                System.out.println("Average Grade: " + averageGrade + "\nLetter Grade: "+grade);
                 return;
             }
         }
